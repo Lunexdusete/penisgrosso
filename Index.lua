@@ -15,6 +15,18 @@ function AutoResearch()
 end
   
 -- Menu 
+local Menu = Window:MakeTab({
+	Name = "FARMS",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+Menu:AddToggle({
+	Name = "FARMAR PC",
+	Default = false,
+	Callback = function(Value)
+		print(Value)
+	end    
+})
 
   
 OrionLib:Init()
