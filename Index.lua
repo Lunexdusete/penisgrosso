@@ -1,2 +1,1 @@
-
-https://raw.githubusercontent.com/Lunexdusete/penisgrosso/main/Index.lua
+--loadstring(game:HttpGet("https://raw.githubusercontent.com/Lunexdusete/penisgrosso/main/Index.lua",true))()
