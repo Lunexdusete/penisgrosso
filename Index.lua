@@ -5,9 +5,9 @@ local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/tha
 _G.AutoResearch = false
 function AutoResearch()
   while _G.AutoResearch == true do 
-  
+  game:GetService("ReplicatedStorage").Events.FinishMinigame:FireServer()
+  wait(0.0001)
   end
-  
 end
   
 OrionLib:Init()
