@@ -24,7 +24,8 @@ Menu:AddToggle({
 	Name = "FARMAR PC",
 	Default = false,
 	Callback = function(Value)
-		print(Value)
+		_G.AutoResearch = Value
+	  AutoResearch()
 	end    
 })
 
