@@ -3,7 +3,10 @@ local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/tha
 
 -- VARIAVEIS
 _G.AutoResearch = false
-function ()
+function AutoResearch()
+  while _G.AutoResearch == true do 
+  
+  end
   
 end
   
