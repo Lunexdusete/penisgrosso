@@ -13,4 +13,4 @@ local Tab = Window:MakeTab({
 	PremiumOnly = false
 })
 
-OrionLib:init
+OrionLib:init()
