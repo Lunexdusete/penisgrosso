@@ -16,9 +16,11 @@ OrionLib:MakeNotification({
 -- FARM 
 _G.Farm = false
 function Farm()
-		while _G.Farm == true do
-			game:GetService("ReplicatedStorage").rEvents.orbEvent:FireServer("collectOrb", "Red Orb", "City")
-			wait(0.0001)
+while _G.Farm == true do
+game:GetService("ReplicatedStorage").rEvents.orbEvent:FireServer("collectOrb", "Red Orb", "Magma City")
+game:GetService("ReplicatedStorage").rEvents.orbEvent:FireServer("collectOrb", "Yellow Orb", "Magma City")
+wait(0.0001)
+	
 		end
 end
 
