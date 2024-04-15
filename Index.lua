@@ -5,13 +5,15 @@ local Window = OrionLib:MakeWindow({Name = "Zoombie Tyconn | Farm ",
   SaveConfig = true,
   ConfigFolder = "@roopzinnk7"})
 
--- VARIAVEIS
-_G.AutoResearch = false
-function AutoResearch()
-  while _G.AutoResearch == true do 
-  game:GetService("ReplicatedStorage").Events.FinishMinigame:FireServer()
-  wait(0.0001)
-  end
+--variaveis
+
+_G.rebirth = true
+while  _G.rebirth == true do 
+local args = {
+    [1] = "rebirthRequest"
+}
+game:GetService("ReplicatedStorage").rEvents.rebirthEvent:FireServer(unpack(args))
+wait (0.0000)
 end
   
 -- Menu 
@@ -21,11 +23,11 @@ local Menu = Window:MakeTab({
 	PremiumOnly = false
 })
 Menu:AddToggle({
-	Name = "FARMAR PC",
+	Name = "AUTO REBIRTH",
 	Default = false,
 	Callback = function(Value)
-		_G.AutoResearch = Value
-	  AutoResearch()
+		_G.Rebirth = Value
+	  rebirth()
 	end    
 })
 
