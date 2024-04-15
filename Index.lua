@@ -18,27 +18,7 @@ OrionLib:MakeNotification({
 _G.Farm = false
 function Farm()
   while _G.Farm == true do
-    local args = {
-      [1] = "collectOrb",
-      [2] = "Red Orb",
-      [3] = "City"
-    }
-    game:GetService("ReplicatedStorage").rEvents.orbEvent:FireServer(unpack(args))
-
-    local args = {
-      [1] = "collectOrb",
-      [2] = "Yellow Orb",
-      [3] = "City"
-    }
-    game:GetService("ReplicatedStorage").rEvents.orbEvent:FireServer(unpack(args))
-
-    local args = {
-      [1] = "collectOrb",
-      [2] = "Blue Orb",
-      [3] = "City"
-    }
-    game:GetService("ReplicatedStorage").rEvents.orbEvent:FireServer(unpack(args))
-
+    game:GetService("ReplicatedStorage").rEvents.orbEvent:FireServer("collectOrb", "Red Orb", "City")
     wait(0.0001)
   end
 end
