@@ -6,7 +6,6 @@ local Window = OrionLib:MakeWindow({
   SaveConfig = false,
   ConfigFolder = "Legends of speed"
 })
-
 OrionLib:MakeNotification({
     Name = "Última atualização - 14/04/2024",
     Content = "Este script pode estar desatualizado devido a possíveis atualizações do jogo.",
@@ -14,7 +13,7 @@ OrionLib:MakeNotification({
     Time = 9
 })
 
--- Valores
+-- FARM 
 _G.Farm = false
 function Farm()
 		while _G.Farm == true do
@@ -23,16 +22,13 @@ function Farm()
 		end
 end
 
+-- Rebirth
 _G.Rb = false
 function Rb()
-  while _G.Rb == true do
-local args = {
-    [1] = "rebirthRequest"
-}
-
-game:GetService("ReplicatedStorage").rEvents.rebirthEvent:FireServer(unpack(args))
-    wait(1) -- espera para evitar loop infinito
-  end
+		while _G.Rb == true do
+			game:GetService("ReplicatedStorage").rEvents.rebirthEvent:FireServer("rebirthRequest")
+			wait(1) 
+			end
 end
 
 -- Menu
